@@ -1,0 +1,118 @@
+:root {
+    --mainColor1: #6699ff;
+    --mainColor2: #3377ff;
+    --boxShadow: rgba(51, 119, 255, 0.46);
+}
+.mainColor {
+    color: var(--mainColor1);
+}
+.card .card-header-secondary .card-icon, .card .card-header-secondary .card-text, .card .card-header-secondary:not(.card-header-icon):not(.card-header-text), .card.bg-secondary, .card.card-rotate.bg-secondary .front, .card.card-rotate.bg-secondary .back {
+    background: var(--mainColor1);
+}
+.card .card-header-primary .card-icon, .card .card-header-primary .card-text, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card.bg-primary, .card.card-rotate.bg-primary .front, .card.card-rotate.bg-primary .back {
+    background: var(--mainColor2);
+}
+.card .card-header-primary .card-icon, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card .card-header-primary .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px var(--boxShadow);
+}
+.navbar.bg-primary {
+    background-color: var(--mainColor1) !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px var(--boxShadow);
+}
+.navbar-nav > a.nav-link {
+    color:  white !important;
+}
+main a, footer a, .dropdown-item,
+.text-primary{
+    color: var(--mainColor1) !important;
+}
+main a:hover, main a:focus,
+footer a:hover, footer a:focus{
+    color: var(--mainColor2) !important;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus, .dropdown-menu a:hover, .dropdown-menu a:focus, .dropdown-menu a:active,
+.navbar.bg-primary .dropdown-item:hover, .navbar.bg-primary .dropdown-item:focus,
+.bootstrap-select .dropdown-item.active{
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px var(--boxShadow);
+    background-color: var(--mainColor1);
+    color: white !important;
+}
+
+.btn.btn-primary {
+    background-color: var(--mainColor1);
+    border-color: var(--mainColor2);
+    box-shadow: 0 2px 2px 0 var(--boxShadow), 0 3px 1px -2px var(--boxShadow), 0 1px 5px 0 var(--boxShadow);
+    color: #fff !important;
+}
+.btn.btn-primary:focus, .btn.btn-primary.focus, .btn.btn-primary:hover, .btn.btn-primary:active {
+    background-color: var(--mainColor2);
+    border-color: var(--mainColor1);
+    color: white !important;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px var(--boxShadow);
+}
+
+.pagination>.page-item.active>a, .pagination>.page-item.active>a:focus, .pagination>.page-item.active>a:hover, .pagination>.page-item.active>span, .pagination>.page-item.active>span:focus, .pagination>.page-item.active>span:hover {
+    background-color: var(--mainColor1);
+    border-color: var(--mainColor2);
+    color: #fff !important;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .custom-select.is-invalid{
+    background-image: linear-gradient(to top,red 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px) !important;
+    border-color: red !important;
+}
+.form-control, .is-focused .form-control {
+    background-image: linear-gradient(to top, var(--mainColor1) 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+
+}
+.nav-tabs .nav-link.active:hover, .nav-tabs .nav-link.active:focus {
+    border-color: var(--mainColor1  );
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background: var(--mainColor1);
+    color: white !important;
+    font-weight: bold;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px var(--boxShadow);
+}
+
+/*!
+ * Datetimepicker for Bootstrap 3
+ * ! version : 4.17.37
+ * https://github.com/Eonasdan/bootstrap-datetimepicker/
+ */
+​
+.bootstrap-datetimepicker-widget a[data-action] {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    background-color: transparent;
+    color: #e53935;
+    box-shadow: none
+}
+​
+.bootstrap-datetimepicker-widget a[data-action]:hover span {
+    background-color: #eee;
+    color: #e53935
+}
+​
+.bootstrap-datetimepicker-widget table td.today>div:before {
+    content: "";
+    display: inline-block;
+    border: 5px solid transparent;
+    border-bottom-color: #e53935;
+    position: absolute;
+    bottom: 4px;
+    right: 4px
+}
+​
+.bootstrap-datetimepicker-widget table td.active:hover>div,
+.bootstrap-datetimepicker-widget table td.active>div {
+    background-color: blue;
+    color: #fff;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(156, 39, 176, .4)
+}
+.bootstrap-datetimepicker-widget table td span.active {
+    background-color: #e53935;
+    color: #fff
+}

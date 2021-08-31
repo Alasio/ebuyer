@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello eBuyer!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Hello eBuyer!</h1>
+
+    This is an example coding task, based on the requirements set out in the technical task:
+    <ol>
+        <li>Create a database of 60 products. Assign each a stock level and a unique bin location from the range A1 - F10</li>
+        <li>Provide a tool for querying a product or a bin location. It should return the product description, bin location and current stock level.</li>
+        <li>Provide a tool to generate a picking route for a list of five or more products. The algorithm should consider factors such as speed, efficiency and scalability.</li>
+        <li>All routes should start and end at a picking station. Your algorithm may choose which ones.</li>
+        <li>The solution must be written in PHP and demonstrate an object oriented approach.</li>
+        <li>The database should be MySQL.</li>
+        <li>Third party libraries are allowed for providing basic functionality however the route
+            algorithm itself must be your own code.</li>
+        <li>Provide a brief explanation of the approach taken and any considerations that went
+            into it. Discuss how your solution would scale to a larger warehouse or orders with
+            more products.</li>
+        <li>Provide instructions on how to use the tools you have written.</li>
+    </ol>
+
+    <h3>Products</h3>
+    <p>Before you begin, in order to load the products into the database, please ensure you have run 'symfony console doctrine:fixtures:load'.
+    This will ensure the products are generated using the Faker plugin for Symfony and loaded into the MySQL 8.0 database.</p>
+    <p>Products and querying them, along with their stock level, bin location and price et al is done through the products tab
+    on the left.  This is done using jquery DataTables.  Simply go to the tab, enter the product name, desctiption, bin location
+    or any part thereof that you wish to query and the search should occur automatically!</p>
+
+    <h3>The Warehouse</h3>
+    <p>The warehouse itself is set out as per the brief (above) with the added marked picking locations in light grey.  As an added bonus,
+    in the warehouse tab itself, by clicking on a bin, you can see the product contained within it!</p>
+
+    <h3>Picking Stock</h3>
+    <p>Originally, I planned on a full blown form input here, allowing for the user to select multiple products by way of
+    a form, allowing the user to add/remove stock lines, set quantities and more, then submit to the back end for validation on
+    stock quantities remaining and more.  However, time and health got in the way.</p>
+    <p>Therefore, the solution became a more simple one: simply select five products at random from the database, ordered by picking
+    location in ascending order.  The picking locations are set out in a snake format around the warehouse (See The Warehouse for the
+    layout), giving the mose efficient way of picking without implementing a full Travelling Salesperson algorithm.</p>
+    <p>With more time and focus, I would have liked to implement better route planning and management, but the solution proposed here
+    is a simple one: set the warehouse out as proposed, marked locations as they are and then order the picking locations, moving around them
+    in ascending (or even descending) order, starting at the closest Packing Station to the first item, then finshing at the closest to the
+    final packing station.</p>
+    <p>Within the code, you can see the start of the forms (See Forms folder) for the collections and how I would approach a user being
+    able to do this, along with expanding to allow for more/less products.  With a larger warehouse, I would use the same snake system, along
+    with the same ordering, but consider further planning optimisation, such as which route to take between picking locations, rather than leaving
+    this to the end worker to decide (IE do I go up to the end of the row, or dow to the start of it, before traversing to the next)</p>
+
+    <h3>Tools Used</h3>
+    <p>Everything is written in Symfony/Php/MySQL.  Please ensure you run migrations and 'symfony console doctrine:fixtures:load' as above before you
+    begin to ensure the database has items within it!</p>
+</div>
+{% endblock %}

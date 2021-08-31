@@ -1,0 +1,51 @@
+<div class="sidebar" data-background-color="white">
+    <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+    <div class="logo">
+        <a href="{{ path('dash') }}" class="simple-text logo-normal">
+            eBuyer
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <!-- Dashboard -->
+            <li class="nav-item {% if app.request.attributes.get('_route') == 'dash' %}active{% endif %}">
+                <a class="nav-link" href="{{ path('dash') }}">
+                    <i class="material-icons">dashboard</i>
+                    <p> Dashboard </p>
+                </a>
+            </li>
+
+            <!-- Products -->
+            <li class="nav-item {% if app.request.attributes.get('_route') == 'products' %}active{% endif %}">
+                <a class="nav-link" href="{{ path('products') }}">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p> Products </p>
+                </a>
+            </li>
+
+            <!-- The Warehouse -->
+            <li class="nav-item {% if app.request.attributes.get('_route') == 'warehouse' %}active{% endif %}">
+                <a class="nav-link" href="{{ path('warehouse') }}">
+                    <i class="fas fa-warehouse"></i>
+                    <p> The Warehouse </p>
+                </a>
+            </li>
+
+            <!-- Picking Stock -->
+            <li class="nav-item {% if app.request.attributes.get('_route') == 'picking' %}active{% endif %}">
+                <a class="nav-link" href="{{ path('picking') }}">
+                    <i class="fas fa-warehouse"></i>
+                    <p> Pick Stock </p>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="bottom">
+        <p>Legal statement about T&C's and stuff</p>
+    </div>
+</div>

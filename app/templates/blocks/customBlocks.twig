@@ -1,0 +1,23 @@
+{% use "bootstrap_4_layout.html.twig" %}
+
+{# Product Block #}
+{% block product_form_widget -%}
+<div class="row">
+
+    <!-- Name -->
+    <div class="col-6 form-group bdm-form-group">
+        <input class="form-control name" type="text"
+               id="name"
+               name="name"
+               value="{{ value.product.name }}"
+               disabled
+        >
+    </div>
+
+    <!-- Quantity -->
+    <div class="col-2 form-group bmd-form-group">
+        {{ form_widget(form.quantity) }}
+        {{ form_errors(form.quantity) }}
+    </div>
+</div>
+{% endblock product_form_widget -%}

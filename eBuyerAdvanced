@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo -e "\e[31m**************************************************\e[0m"
+echo -e "\e[31m**                    WARNING                   **\e[0m"
+echo -e "\e[31m**************************************************\e[0m"
+echo "These are advanved options - Proceed with caution!"
+echo ""
+PS3='Please enter your choice: '
+options=("Set the File Permissions" "Reset the Cache" "Stop the Server and Delete All Containers" "Delete Containers and Data Volumes" "Reset Database (Server MUST be Running)" "Quit")
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Set the File Permissions")
+            sudo chmod -R 777 app/var
+            ;;
+        "Reset the Cache")
+            sudo rm -rf app/var/cache/* app/var/log/*
+            sudo chmod -R 777 app/var
+            ;;
+        "Stop the Server and Delete All Containers")
+            docker-compose down --rmi all
+            ;;
+        "Delete Containers and Data Volumes")
+            docker rm $(docker ps -a -q) -f
+            docker volume prune -f
+            docker system prune -f
+            docker container prune -f
+            ;;
+        "Reset Database (Server MUST be Running)")
+            docker-compose exec php php bin/console doctrine:migrations:migrate first --no-interaction
+            docker-compose exec php php bin/console doctrine:migrations:migrate --no-interaction
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done

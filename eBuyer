@@ -1,0 +1,34 @@
+#!/bin/bash
+
+PS3='Please enter your choice: '
+options=("Start the Server" "Stop the Server" "Check if the Server is Running" "Run Composer (Server MUST be Running)" "Run Migrations (Server MUST be Running)" "Show Container Logs" "Quit")
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Start the Server")
+            docker-compose up --build -d
+            ;;
+        "Stop the Server")
+            docker-compose down
+            ;;
+        "Check if the Server is Running")
+            docker ps
+            ;;
+        "Run Composer (Server MUST be Running)")
+            docker-compose exec composer composer update --ignore-platform-reqs
+            ;;
+        "Run Migrations (Server MUST be Running)")
+            docker-compose exec php php bin/console doctrine:migrations:migrate --no-interaction
+            ;;
+        "Show Container Logs")
+            docker ps
+            read -p 'Please enter the container ID: ' id
+            docker logs --tail 50 --follow --timestamps $id
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done

@@ -1,0 +1,29 @@
+{% if addHeader is defined and addHeader == true %}
+    <div class="uk-modal-header">
+        {{ header }}
+    </div>
+{% endif %}
+
+<div class="alert alert-{{ status }} {% if addClass is defined %}{{ addClass }}{% endif %}">
+    {% if message is iterable %}
+        {% for value in message %}
+            {{ value }}<br>
+        {% endfor %}
+    {% else %}
+        {% if raw is defined and raw == true %}
+            {{ message|raw }}
+        {% else %}
+            {{ message }}
+        {% endif %}
+    {% endif %}
+</div>
+
+{% if addClose is defined and addClose == true %}
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                {% if refreshPage is defined %}
+                    onClick="window.location.reload();"
+                {% endif %}
+        >Close</button>
+    </div>
+{% endif %}

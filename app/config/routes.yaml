@@ -1,0 +1,27 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+## Ajax Route ##
+ajax:
+    path: /ajax
+    controller: App\Controller\AjaxController::ajaxAction
+
+dash:
+    path: /
+    controller: App\Controller\DashboardController::index
+
+## Products
+products:
+    path: /products
+    controller: App\Controller\ProductController::index
+
+## The Warehouse
+warehouse:
+    path: /warehouse
+    controller: App\Controller\WarehouseController::index
+
+## Picking Stock
+picking:
+    path: /picking
+    controller: \App\Controller\PickingRouteController::index

@@ -1,0 +1,528 @@
+:root {
+    --main1: #673cb8;
+    --main1Light: #3cb867;
+    --nav: #4d4d4d;
+    --navHover: #808080;
+    --main1RGB: rgb(103, 60,184);
+    --main2: #fff;
+}
+
+.main-panel {
+    width: calc(100% - 120px);
+}
+
+.logo-normal {
+    text-align: center;
+}
+
+.nav-link {
+    text-align: center;
+}
+#logout {
+    bottom: 0px;
+    position: absolute;
+}
+
+.main-panel > .content {
+    margin-top: 0 !important;
+}
+
+.nav-link i {
+    border-radius: 50%;
+    font-size: 24px;
+    float: left;
+    margin-right: 15px;
+    line-height: 40px !important;
+    width: 100% !important;
+    text-align: center;
+    color: var(--main1);
+    margin-top: -5px;
+}
+.sidebar .nav {
+    color: var(--main1);
+}
+.sidebar .nav p {
+    font-size: 12px;
+    position: relative;
+    display: inline;
+    height: auto;
+    white-space: normal;
+}
+
+.sidebar .nav li a, .sidebar .nav li .dropdown-menu a {
+    margin: 30px 15px 0;
+    border-radius: 7px;
+}
+.sidebar .nav i {
+    color: inherit !important;
+}
+
+.card-header .col-10 h3 {
+    margin:12px 0 !important;
+}
+
+.card-no-spacing .card-body .form-group{
+    margin: 0;
+}
+
+.bmd-label-static {
+    margin-left: 14px;
+}
+
+.card-no-spacing .card-body .col-form-label, .card .card-body .label-on-right {
+    padding: 0 5px 0 0;
+    margin: 0;
+}
+.card-no-spacing .card-header {
+    padding: 0.75rem 1.25rem 0 1.25rem;
+    margin: 0;
+}
+.card-no-spacing .card-body {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.sidebar .nav li a:hover,
+.sidebar .nav li .dropdown-menu a:hover,
+.sidebar .nav li.active > a, .sidebar .nav li.active > a i {
+    background: var(--main1);
+    color: #fff;
+}
+
+.sidebar-mini .sidebar, .sidebar-mini .sidebar .sidebar-wrapper,
+.sidebar .sidebar-wrapper,
+.sidebar .logo {
+    background: white;
+}
+
+.sidebar {
+    width: 120px !important;
+}
+
+.sidebar .sidebar-wrapper {
+    width: 120px !important;
+}
+.card .card-header .card-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-button {
+    border-radius: 10px;
+}
+
+.site .card-header > i {
+    position: absolute !important;
+    font-size: 30px !important;
+    top: 10px !important;
+    right: 10px !important;
+    color: #fff !important;
+    background: var(--main1) !important;
+    -webkit-border-radius: 50%;
+}
+
+.card-button > .card-header > i {
+    position: absolute !important;
+    font-size: 50px !important;
+    top: 21px !important;
+    right: 25px !important;
+    color: #fff !important;
+    background: var(--main1) !important;
+    -webkit-border-radius: 50%;
+}
+.card {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.card .card-header > h3 {
+    margin: 0 !important;
+}
+
+.border-outline {
+    border: 1px solid #e0e0e0;
+}
+
+.card-button {
+    color: #333333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.card-button > .card-header > .card-title {
+    margin-bottom: 0;
+}
+
+.card-button > .card-header {
+    padding: 30px 10px;
+    background: transparent !important;
+}
+.btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover {
+    border-color: var(--main2) !important;
+}
+.btn.btn-primary {
+    background-color: var(--main1) !important;
+    border: 1px solid var(--main1) !important;
+    box-shadow: none !important;
+    color: var(--main2);
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+    background-color: var(--main2) !important;
+    border-color: var(--main1) !important;
+    color: var(--main1) !important;
+    box-shadow: none !important;
+}
+
+.row-eq-height .card {
+    height: 100%;
+}
+
+.float-bottom {
+    bottom: 0;
+    position: absolute;
+    width: 93%;
+}
+
+.goUrl {
+    cursor: pointer;
+}
+
+.btn.btn-white, .btn.btn-white:focus, .btn.btn-white:hover {
+    border: 1px solid #d9d9d9;
+}
+
+.btn-with-icon i {
+    position: absolute !important;
+    font-size: 30px !important;
+    top: 36px !important;
+    right: 5px !important;
+    color: #fff !important;
+    background: var(--main1) !important;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+.btn-with-icon-small {
+    padding: 3px 29px 3px 14px!important;
+}
+.btn-with-icon-small i {
+    font-size: 20px !important;
+    top: 21px !important;
+    right: 5px !important;
+}
+
+
+.btn-with-icon-green i {
+    background: var(--main1Light) !important;
+}
+
+
+.btn-with-icon {
+    padding: 12px 59px 12px 30px;
+    border-radius: 7px;
+}
+
+.companyIcon img {
+    width: 100% !important;
+}
+
+#siteList .card {
+    border: 1px solid #d9d9d9;
+}
+
+.ownerTable tr {
+    height: 40px !important;
+}
+
+.photo img {
+    width: 100%;
+}
+
+/*!
+* Custom NAVIGATION
+*/
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+.contractNav ul,
+.customNav ul {
+    height: 60px;
+    padding: 10px 0 10px 40px;
+    width: 100%;
+    list-style-type: none;
+}
+
+.contractNav li,
+.customNav li {
+    background: var(--nav);
+    float: left;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+.contractNav li {
+    width: 30%;
+    padding: 10px 3px;
+    margin-right: 22px;
+}
+
+.customNav li {
+    width: 23%;
+    padding: 10px 3px;
+    margin-right: 22px;
+}
+
+.contractNav li:last-of-type,
+.customNav li:last-of-type {
+    margin-right: 0px;
+}
+
+.contractNav li:before,
+.customNav li:before {
+    background: none;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 40px solid var(--nav);
+    content: "";
+    left: -20px;
+    position: absolute;
+    top: 0;
+}
+
+.contractNav li:after,
+.customNav li:after {
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid var(--nav);
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 0;
+}
+.contractNav a,
+.customNav a {
+    color: var(--nav);
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contractNav li:hover,
+.customNav li:hover {
+    background: var(--navHover);
+    cursor: pointer;
+    color: white;
+}
+
+.contractNav li.active {
+    background:  var(--navHover);
+}
+.customNav li.active {
+    background: white;
+    cursor: pointer;
+    color: var(--nav);
+}
+
+.contractNav li:hover:before,
+.customNav li:hover:before {
+    border-top: 40px solid var(--navHover);
+}
+
+.contractNav li.active:before {
+    border-top: 40px solid  var(--navHover);
+}
+.customNav li.active:before{
+    border-top: 40px solid white;
+}
+
+.contractNav li:hover:after,
+.customNav li:hover:after {
+    border-bottom: 40px solid var(--navHover);
+}
+.contractNav li.active:after {
+    border-bottom: 40px solid  var(--navHover);
+}
+.customNav li.active:after{
+    border-bottom: 40px solid white;
+}
+
+
+.latestBill {
+    text-align: center;
+}
+.latestBill h4 {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.latestBill h6:first-child {
+    margin-top: 40px;
+}
+.latestBill h6:last-child {
+    padding-bottom: 40px;
+}
+
+/*!
+* Datetimepicker for Bootstrap 3
+* ! version : 4.17.37
+* https://github.com/Eonasdan/bootstrap-datetimepicker/
+*/
+
+.bootstrap-datetimepicker-widget a[data-action] {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    background-color: transparent;
+    color: var(--main1) !important;
+    box-shadow: none
+}
+
+.bootstrap-datetimepicker-widget a[data-action] span {
+    color: var(--main1) !important;
+}
+
+.bootstrap-datetimepicker-widget a[data-action]:hover span {
+    background-color: #eee;
+    color: var(--main1) !important;
+}
+
+.bootstrap-datetimepicker-widget table td.today > div:before {
+    content: "";
+    display: inline-block;
+    border: 5px solid transparent;
+    border-bottom-color: var(--main1) !important;
+    position: absolute;
+    bottom: 4px;
+    right: 4px
+}
+
+.bootstrap-datetimepicker-widget table td.active:hover > div,
+.bootstrap-datetimepicker-widget table td.active > div {
+    background-color: var(--main1) !important;
+    color: #fff;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(156, 39, 176, .4)
+}
+
+.bootstrap-datetimepicker-widget table td span.active {
+    background-color: var(--main1) !important;
+    color: #fff
+}
+
+.bootstrap-select .dropdown-item.active,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu a:hover, .dropdown-menu a:focus,
+.dropdown-menu a:active {
+    background-color: var(--main1);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.card-border {
+    border: 1px solid #3C4858 !important;
+}
+.card .card-header-primary .card-icon, .card .card-header-primary .card-text, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card.bg-primary, .card.card-rotate.bg-primary .front, .card.card-rotate.bg-primary .back {
+    background: linear-gradient(60deg, var(--main1), #333333);
+}
+
+.nav-pills .nav-item .nav-link.active {
+    background-color: var(--main1);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/*!
+* PAGINATION
+*/
+
+
+.pagination > .page-item.active > a,
+.pagination > .page-item.active > a:focus,
+.pagination > .page-item.active > a:hover,
+.pagination > .page-item.active > span,
+.pagination > .page-item.active > span:focus,
+.pagination > .page-item.active > span:hover {
+    background-color: var(--main1) !important;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    border-color: var(--main1);
+}
+.togglebutton label input[type=checkbox]:checked+.toggle {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.togglebutton label input[type=checkbox]:checked+.toggle:after {
+    border-color: var(--main1);
+}
+.card .card-header-primary .card-icon, .card .card-header-primary:not(.card-header-icon):not(.card-header-text), .card .card-header-primary .card-text {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.btn.btn-success {
+    background-color: #6B8E23;
+    border-color: #7aa329;
+    box-shadow: 0 2px 2px 0 rgba(107, 142, 35, 0.14), 0 3px 1px -2px rgba(107, 142, 35, 0.2), 0 1px 5px 0 rgba(107, 142, 35, 0.12);
+}
+.btn.btn-success:hover,
+.btn.btn-success:active,
+.btn.btn-success:focus {
+    background-color: #7aa329;
+}
+
+.btn.btn-danger {
+    background-color: #B22222;
+    border-color: #d62929;
+    box-shadow: 0 2px 2px 0 rgba(178, 34, 34, 0.14), 0 3px 1px -2px rgba(178, 34, 34, 0.2), 0 1px 5px 0 rgba(178, 34, 34, 0.12);
+}
+.btn.btn-danger:hover,
+.btn.btn-danger:active,
+.btn.btn-danger:focus {
+    background-color: #d62929;
+}
+
+.s-title,
+.m-title {
+    color: #000 !important;
+}
+
+.bootstrap-select>.dropdown-toggle {
+    padding: 10px 0 !important;
+}
+.btn.btn-secondary {
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    color: #000;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+.btn.btn-secondary:active {
+    background: #fff;
+    box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+}
+
+.modal-dialog .modal-header .close {
+    top: 20px!important;
+    right: 20px!important;
+}
+.modal-dialog .modal-header {
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1px dashed rgba(0,0,0,.2);
+}
+.modal-dialog .modal-body+.modal-footer {
+    padding-top: 10px;
+    border-top: 1px dashed rgba(0,0,0,.2);
+}
+
+@media(min-width: 992px) {
+    .sidebar .nav li a, .sidebar .nav li .dropdown-menu a {
+        margin: 2px 15px 0 !important;
+    }
+    .nav-pills .nav-item .nav-link {
+        padding: 5px 5px !important;
+    }
+}
